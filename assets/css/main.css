@@ -17,7 +17,7 @@ small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption, 
+canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
@@ -74,6 +74,8 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
+
 /* Progress */
 .skilltitle {
 	text-align: right;
@@ -81,7 +83,7 @@ input, select, textarea {
 	padding-right: 0px;
 	}
 .progress {
-		position: 	relative;	
+		position: 	relative;
 		border-radius: 8px;
 		height: 5px;
 /*		padding	:10px;
@@ -264,7 +266,7 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: calc(100% - 4em);
 		width: 60em;
-		position: 	relative;	
+		position: 	relative;
 	}
 
 		.container.xsmall {
@@ -2414,6 +2416,7 @@ input, select, textarea {
 			.image.fit img {
 				width: 100%;
 			}
+
 
 /* List */
 
