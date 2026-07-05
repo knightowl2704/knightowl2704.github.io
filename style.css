@@ -225,6 +225,38 @@ ul { list-style: none; }
 .nav-brand__icon--spark { background: var(--clr-spark-icon-bg); }
 .nav-brand__icon--docs  { background: var(--clr-docs-icon-bg); }
 
+/* Nav right-side group */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+/* Nav left-side group (back arrow + brand) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+/* iOS-style back chevron icon button */
+.nav-back-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-full);
+  color: var(--clr-text-secondary);
+  flex-shrink: 0;
+  transition: background var(--t-fast), color var(--t-fast);
+}
+
+.nav-back-icon:hover {
+  background: var(--clr-surface-alt);
+  color: var(--clr-text-primary);
+}
+
 /* ============================================================
    6. BUTTONS
    ============================================================ */
