@@ -42,6 +42,8 @@
   --clr-spark-icon:     #3D52D5;
   --clr-docs-icon-bg:   #FEF3C7;
   --clr-docs-icon:      #92400E;
+  --clr-sfw-icon-bg:    #E0F2FE;
+  --clr-sfw-icon:       #0284C7;
 
   /* -- Typography -- */
   --ff:                 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -224,6 +226,7 @@ ul { list-style: none; }
 
 .nav-brand__icon--spark { background: var(--clr-spark-icon-bg); }
 .nav-brand__icon--docs  { background: var(--clr-docs-icon-bg); }
+.nav-brand__icon--sfw   { background: var(--clr-sfw-icon-bg); }
 
 /* Nav right-side group */
 .nav-right {
@@ -460,6 +463,7 @@ ul { list-style: none; }
 
 .ext-card__icon--spark { background: var(--clr-spark-icon-bg); }
 .ext-card__icon--docs  { background: var(--clr-docs-icon-bg); }
+.ext-card__icon--sfw   { background: var(--clr-sfw-icon-bg); }
 
 /* Title */
 .ext-card__title {
@@ -605,6 +609,7 @@ ul { list-style: none; }
 /* Inline text highlight spans */
 .hl-docs  { color: var(--clr-teal); }
 .hl-spark { color: var(--clr-accent); }
+.hl-sfw   { color: var(--clr-sfw-icon); }
 
 /* ============================================================
    12. FEATURE GRID  (product pages — 2×2)
