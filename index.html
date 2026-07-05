@@ -1,48 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="google-site-verification"
-      content="6IfafA2id_oNpcjHZ8q-nn6VOjDAzj-94QMMfPwMONU"
-    />
-    <title>Browser Extensions by Piyush</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A collection of browser extensions including Docs Comment Exporter and Spark."
-    />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
 
-  <body>
-    <header class="container">
-      <h1>Browser Extensions</h1>
-      <p class="subtitle">Tools to improve your workflow and productivity.</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="6IfafA2id_oNpcjHZ8q-nn6VOjDAzj-94QMMfPwMONU" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <main class="container">
-      <section>
-        <h2><a href="/docs-comment-exporter/">Docs Comment Exporter</a></h2>
-        <p>
-          Export Google Docs comments to Markdown, CSV, or JSON in one click. 
-          Everything runs entirely in your browser.
-        </p>
-      </section>
+  <!-- ======================== CONFIG: SEO ========================
+         Edit page title and description here.
+         ============================================================ -->
+  <title>Refined Productivity Systems – Browser Extensions</title>
+  <meta name="description"
+    content="A curated suite of minimalist, high-performance browser extensions designed for modern creators and technical professionals." />
+  <!-- ============================================================ -->
 
-      <section>
-        <h2><a href="/spark/">Spark</a></h2>
-        <p>
-          A local-first browser extension to manage, organize, and instantly inject your custom AI prompts into platforms like ChatGPT and Claude.
-        </p>
-      </section>
-    </main>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/style.css" />
+</head>
 
-    <footer class="container footer">
-      <p>
-        <a href="mailto:piyushraut27@gmail.com">Contact</a>
+<body>
+
+  <!-- ======================== CONFIG: HOMEPAGE HERO ========================
+         Edit the main headline and subtitle here.
+         ======================================================================= -->
+  <section class="home-hero">
+    <div class="container">
+      <h1 class="home-hero__title anim-fadeinup">
+        Supercharge your digital workflow with precision.
+      </h1>
+      <p class="home-hero__subtitle anim-fadeinup anim-fadeinup-d1">
+        A curated suite of minimalist, high-performance browser extensions
+        designed for modern creators and technical professionals.
       </p>
-      <p class="copyright">© 2026 Piyush Raut</p>
-    </footer>
-  </body>
+    </div>
+  </section>
+  <!-- ======================================================================= -->
+
+  <!-- ======================== CONFIG: EXTENSION CARDS ========================
+         Each card: icon, title, tagline, description, features[], and button URLs.
+         ======================================================================= -->
+  <section class="extensions-section" aria-label="Our extensions">
+    <div class="extensions-grid">
+
+      <!-- ── SPARK CARD ── -->
+      <article class="ext-card anim-fadeinup anim-fadeinup-d1" id="spark-card">
+
+        <!-- Icon: change emoji or swap for an <img> -->
+        <div class="ext-card__icon ext-card__icon--spark" aria-hidden="true">⚡</div>
+
+        <!-- Title -->
+        <h2 class="ext-card__title">Spark</h2>
+
+        <!-- One-liner tagline -->
+        <p class="ext-card__tagline">"Never lose a great AI prompt again."</p>
+
+        <!-- Short description -->
+        <p class="ext-card__desc">
+          A personal AI prompt library built directly into the browser for
+          writing code, drafting emails, and generating content. Focus on
+          creation while Spark manages your intellectual assets.
+        </p>
+
+        <!-- Key feature bullets (keep to 3) -->
+        <ul class="ext-card__features" aria-label="Key features">
+          <li class="ext-card__feature">
+            <span class="ext-card__feature-icon" aria-hidden="true">✓</span>
+            In-context sidebar access
+          </li>
+          <li class="ext-card__feature">
+            <span class="ext-card__feature-icon" aria-hidden="true">✓</span>
+            One-click auto-paste integration
+          </li>
+          <li class="ext-card__feature">
+            <span class="ext-card__feature-icon" aria-hidden="true">✓</span>
+            100% data portability
+          </li>
+        </ul>
+
+        <!-- CTA buttons — update hrefs to change destinations -->
+        <div class="ext-card__actions">
+          <a href="/spark/" class="btn btn-primary" id="spark-view-more">
+            View More
+            <!-- Arrow icon -->
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/watch?v=Kxxx_OGu_hA" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary" id="spark-watch-demo">
+            <!-- Play circle icon -->
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
+              <path d="M6.5 5.8l4 2.2-4 2.2V5.8z" fill="currentColor" />
+            </svg>
+            Watch Demo
+          </a>
+        </div>
+
+        <!-- Screenshot — replace src with a real screenshot when available -->
+        <div class="ext-card__visual" aria-hidden="true">
+          <img src="/assets/images/spark-ui.png" alt="Spark extension sidebar showing an organised AI prompt library"
+            loading="lazy" width="800" height="450" />
+        </div>
+
+      </article>
+      <!-- ── END SPARK CARD ── -->
+
+      <!-- ── DOCS COMMENT EXPORTER CARD ── -->
+      <article class="ext-card anim-fadeinup anim-fadeinup-d2" id="docs-card">
+
+        <!-- Icon -->
+        <div class="ext-card__icon ext-card__icon--docs" aria-hidden="true">📄</div>
+
+        <!-- Title -->
+        <h2 class="ext-card__title">Docs Comment Exporter</h2>
+
+        <!-- One-liner tagline -->
+        <p class="ext-card__tagline">
+          "Export Google Docs comments to Markdown, JSON, or CSV&nbsp;–&nbsp;instantly."
+        </p>
+
+        <!-- Short description -->
+        <p class="ext-card__desc">
+          Bridge the gap between collaborative editing and your technical
+          documentation workflow. Everything runs entirely in your browser
+          for maximum data privacy and security.
+        </p>
+
+        <!-- Key feature bullets (keep to 3) -->
+        <ul class="ext-card__features" aria-label="Key features">
+          <li class="ext-card__feature">
+            <span class="ext-card__feature-icon" aria-hidden="true">✓</span>
+            Local processing (privacy focused)
+          </li>
+          <li class="ext-card__feature">
+            <span class="ext-card__feature-icon" aria-hidden="true">✓</span>
+            Instant comment detection
+          </li>
+          <li class="ext-card__feature">
+            <span class="ext-card__feature-icon" aria-hidden="true">✓</span>
+            Full metadata preservation
+          </li>
+        </ul>
+
+        <!-- CTA buttons -->
+        <div class="ext-card__actions">
+          <a href="/docs-comment-exporter/" class="btn btn-primary" id="docs-view-more">
+            View More
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="https://youtu.be/TaQ8Ptnp1jI?si=yLJOum3GZFU3nPZL" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary" id="docs-watch-demo">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
+              <path d="M6.5 5.8l4 2.2-4 2.2V5.8z" fill="currentColor" />
+            </svg>
+            Watch Demo
+          </a>
+        </div>
+
+        <!-- Screenshot -->
+        <div class="ext-card__visual" aria-hidden="true">
+          <img src="/assets/images/docs-ui.png" alt="Docs Comment Exporter showing a comment export dialog"
+            loading="lazy" width="800" height="450" />
+        </div>
+
+      </article>
+      <!-- ── END DOCS CARD ── -->
+
+    </div>
+  </section>
+  <!-- ======================================================================= -->
+
+  <!-- ======================== CONFIG: FOOTER ========================
+         Update footer links and brand name below.
+         =================================================================== -->
+  <footer class="site-footer">
+
+    <div class="footer-bottom">
+      <!-- Brand name displayed at the very bottom left -->
+      <div class="footer-locale">
+        <!-- Globe icon -->
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="5.8" stroke="currentColor" stroke-width="1.2" />
+          <ellipse cx="7" cy="7" rx="2.4" ry="5.8" stroke="currentColor" stroke-width="1.2" />
+          <path d="M1.2 7h11.6M1.2 4.5h11.6M1.2 9.5h11.6" stroke="currentColor" stroke-width="1.2" />
+        </svg>
+        English (US)
+      </div>
+    </div>
+  </footer>
+  <!-- =================================================================== -->
+
+</body>
+
 </html>

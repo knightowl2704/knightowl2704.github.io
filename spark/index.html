@@ -1,52 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Spark – AI Prompt Library & Template Manager</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A local-first browser extension to manage, organize, and inject AI prompts for ChatGPT, Claude, Gemini, and more."
-    />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
 
-  <body>
-    <header class="container">
-      <h1>Spark</h1>
-      <p class="subtitle">
-        AI Prompt Library & Template Manager. 100% Local.
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ======================== CONFIG: SEO ======================== -->
+  <title>Spark – AI Prompt Library &amp; Template Manager</title>
+  <meta name="description"
+    content="Save, organise, and auto-paste your favourite AI prompts instantly with a sleek, built-in sidebar. 100% local. No cloud, no tracking." />
+  <!-- ============================================================ -->
+
+  <!-- ======================== CONFIG: URLS ========================
+         Chrome Web Store install link
+         Demo video link
+         ============================================================ -->
+  <!-- INSTALL_URL = https://chromewebstore.google.com/detail/spark-ai-prompt-library-t/kblngochngbefbjcfjgfbpgeiannollp?authuser=0&hl=en-GB -->
+  <!-- DEMO_URL    = https://www.youtube.com/watch?v=Kxxx_OGu_hA -->
+  <!-- ============================================================ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+  <!-- ──────────────────────────────────────────────────────────────
+         NAV
+    ────────────────────────────────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <!-- ======================== CONFIG: BRAND ======================== -->
+      <a href="/spark/" class="nav-brand" aria-label="Spark home">
+        <span class="nav-brand__icon nav-brand__icon--spark" aria-hidden="true">⚡</span>
+        Spark
+      </a>
+      <!-- ============================================================ -->
+      <a href="https://chromewebstore.google.com/detail/spark-ai-prompt-library-t/kblngochngbefbjcfjgfbpgeiannollp?authuser=0&hl=en-GB"
+        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="nav-install-spark">
+        Add to Chrome
+      </a>
+    </div>
+  </nav>
+
+  <!-- ──────────────────────────────────────────────────────────────
+         HERO
+    ────────────────────────────────────────────────────────────────── -->
+
+  <!-- ======================== CONFIG: HERO ========================
+         Edit the main headline, subtitle, and CTA button text below.
+         ============================================================ -->
+  <section class="product-hero" aria-labelledby="spark-hero-heading">
+    <div class="container">
+
+      <h1 class="product-hero__title anim-fadeinup" id="spark-hero-heading">
+        Never lose a great
+        <span class="hl-spark">AI prompt</span>
+        again.
+      </h1>
+
+      <p class="product-hero__subtitle anim-fadeinup anim-fadeinup-d1">
+        A personal prompt library with smart organisation. Open your sidebar,
+        search instantly, and deploy templates without leaving your active
+        chat window.
       </p>
-    </header>
 
-    <main class="container">
-      <section>
-        <p>
-          Spark is a local-first browser extension that allows you to save, organize, and instantly inject your custom prompts into supported AI web interfaces like ChatGPT, Claude, Gemini, and DeepSeek.
+      <div class="product-hero__actions anim-fadeinup anim-fadeinup-d2">
+        <a href="https://chromewebstore.google.com/detail/spark-ai-prompt-library-t/kblngochngbefbjcfjgfbpgeiannollp?authuser=0&hl=en-GB"
+          target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" id="spark-hero-install">
+          <!-- Download icon -->
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          Add to Chrome – Free
+        </a>
+        <a href="https://www.youtube.com/watch?v=Kxxx_OGu_hA" target="_blank" rel="noopener noreferrer"
+          class="btn btn-ghost btn-lg" id="spark-hero-demo">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4" />
+            <path d="M6.5 5.8l4 2.2-4 2.2V5.8z" fill="currentColor" />
+          </svg>
+          Watch Demo
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Hero visual -->
+    <div class="product-hero__visual anim-fadeinup anim-fadeinup-d3" aria-hidden="true">
+      <div class="visual-frame">
+        <img src="/assets/images/spark-ui.png"
+          alt="Spark browser extension sidebar showing an organised AI prompt library" width="860" height="340" />
+      </div>
+    </div>
+  </section>
+  <!-- ============================================================ -->
+
+  <!-- ──────────────────────────────────────────────────────────────
+         FEATURE GRID — "Master your AI workflow"
+    ────────────────────────────────────────────────────────────────── -->
+
+  <!-- ======================== CONFIG: FEATURES ========================
+         Edit feature titles and descriptions in the cells below.
+         =================================================================== -->
+  <section class="features-section" id="features" aria-labelledby="spark-features-heading">
+    <div class="container">
+
+      <header class="section-header">
+        <h2 class="section-header__title" id="spark-features-heading">
+          Master your AI workflow
+        </h2>
+        <p class="section-header__subtitle">
+          Everything your workflow needs, right at your fingertips.
         </p>
+      </header>
 
-        <p>
-          Everything runs entirely on your local machine. Your templates and workflows belong to you — no cloud servers, no data collection, and no tracking.
-        </p>
-      </section>
+      <div class="feature-grid" role="list">
 
-      <section>
-        <h2>Features</h2>
-        <ul>
-          <li><strong>Local-First:</strong> All prompt templates, folders, and tags are saved securely in your browser's local database.</li>
-          <li><strong>Quick Add:</strong> Highlight text on any webpage and use the right-click context menu to instantly save snippets.</li>
-          <li><strong>Seamless Injection:</strong> Automatically paste your selected templates directly into the text fields of popular AI platforms.</li>
-          <li><strong>Data Portability:</strong> Easily import or export your entire prompt database as a manual backup.</li>
+        <div class="feature-cell" role="listitem">
+          <div class="feature-cell__icon feature-cell__icon--accent" aria-hidden="true">🔹</div>
+          <h3 class="feature-cell__title">In-Context Sidebar Access</h3>
+          <p class="feature-cell__body">
+            Instantly pull up your personal library without leaving your current
+            webpage. Spark adds a smooth, sliding sidebar overlay that stays
+            tucked away until you need it. Collapse it into a discreet button
+            or resize it to match your ideal workspace.
+          </p>
+        </div>
+
+        <div class="feature-cell" role="listitem">
+          <div class="feature-cell__icon feature-cell__icon--amber" aria-hidden="true">⚡</div>
+          <h3 class="feature-cell__title">One-Click Auto-Paste</h3>
+          <p class="feature-cell__body">
+            The ultimate time-saver. Click any saved snippet and Spark
+            automatically injects the text directly into the active input
+            field of major AI platforms. A clipboard copy option is also
+            available for full compatibility with every site.
+          </p>
+        </div>
+
+        <div class="feature-cell" role="listitem">
+          <div class="feature-cell__icon feature-cell__icon--purple" aria-hidden="true">📁</div>
+          <h3 class="feature-cell__title">Advanced Organisation</h3>
+          <p class="feature-cell__body">
+            Custom folders, visual colour-coding, drag-and-drop reordering,
+            and a star-favourites system keep your library perfectly sorted
+            no matter how large it grows.
+          </p>
+        </div>
+
+        <div class="feature-cell" role="listitem">
+          <div class="feature-cell__icon feature-cell__icon--teal" aria-hidden="true">🔍</div>
+          <h3 class="feature-cell__title">Instant Search</h3>
+          <p class="feature-cell__body">
+            Find exactly what you need in milliseconds. Type a few keywords
+            into the built-in search bar to instantly filter your entire
+            collection — no scrolling, no hunting.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- =================================================================== -->
+
+  <!-- ──────────────────────────────────────────────────────────────
+         ELEGANCE SECTION — Themes + Data Portability
+    ────────────────────────────────────────────────────────────────── -->
+
+  <!-- ======================== CONFIG: ELEGANCE SECTION ========================
+         Edit section title and check-list items below.
+         ========================================================================= -->
+  <section class="elegance-section" id="themes" aria-labelledby="spark-elegance-heading">
+    <div class="elegance-row">
+
+      <!-- Left: visual demos -->
+      <div class="elegance-visual" aria-hidden="true">
+        <!-- Theme toggle demo -->
+        <div class="theme-toggle-demo">
+          <div class="theme-pill theme-pill--light">
+            ☀️ Light
+          </div>
+          <div class="theme-pill theme-pill--dark">
+            🌙 Dark
+          </div>
+        </div>
+        <!-- Portability card -->
+        <div class="portable-card">
+          <div class="portable-card__icon">☁️</div>
+          <div>
+            <p class="portable-card__title">100% Portable</p>
+            <p class="portable-card__subtitle">Your data, anytime, anywhere.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: text content -->
+      <div class="elegance-content">
+        <h2 class="elegance-content__title" id="spark-elegance-heading">
+          Elegance meets control.
+        </h2>
+        <ul class="check-list" aria-label="Theme and portability features">
+          <li class="check-list__item">
+            <span class="check-list__icon" aria-hidden="true">✓</span>
+            <div>
+              <strong>Beautiful Themes</strong><br />
+              Fully supports Light and Dark modes, automatically adapting to
+              your system preferences or your mood.
+            </div>
+          </li>
+          <li class="check-list__item">
+            <span class="check-list__icon" aria-hidden="true">✓</span>
+            <div>
+              <strong>Data Portability</strong><br />
+              Export your entire library into a secure backup file with one
+              click, or import it to restore your setup on a new device.
+            </div>
+          </li>
         </ul>
-      </section>
-    </main>
+      </div>
 
-    <footer class="container footer">
-      <p>
-        <a href="privacy/">Privacy Policy</a>
-        ·
-        <a href="mailto:Support">Contact Support</a>
-      </p>
-    </footer>
-  </body>
+    </div>
+  </section>
+  <!-- ========================================================================= -->
+
+  <!-- ──────────────────────────────────────────────────────────────
+         PRIVACY SECTION — "Local. Secure. Silent."
+    ────────────────────────────────────────────────────────────────── -->
+
+  <!-- ======================== CONFIG: PRIVACY SECTION ========================
+         Edit the privacy headline, subtitle, and cell content below.
+         ======================================================================== -->
+  <section class="privacy-section" id="privacy" aria-labelledby="spark-privacy-heading">
+    <div class="container">
+
+      <header class="privacy-section-header">
+        <div class="section-label section-label--green" style="margin-bottom: var(--sp-4); display: inline-flex;">
+          🔒 Privacy First
+        </div>
+        <h2 class="section-header__title" id="spark-privacy-heading">
+          Local. Secure. Silent.
+        </h2>
+        <p class="section-header__subtitle">
+          Protecting your creative assets is our priority. Every prompt and
+          template you save stays exclusively within your browser's local
+          storage.
+        </p>
+      </header>
+
+      <div class="privacy-grid">
+        <div class="privacy-cell">
+          <div class="privacy-cell__icon">🗄️</div>
+          <h3 class="privacy-cell__title">Local Storage</h3>
+          <p class="privacy-cell__body">
+            Your snippets are stored securely in your local browser. We do
+            not operate central servers to collect or store your data.
+          </p>
+        </div>
+        <div class="privacy-cell">
+          <div class="privacy-cell__icon">🚫</div>
+          <h3 class="privacy-cell__title">No Tracking</h3>
+          <p class="privacy-cell__body">
+            We do not track your browsing history, monitor your keystrokes,
+            or collect analytics on your AI interactions.
+          </p>
+        </div>
+        <div class="privacy-cell">
+          <div class="privacy-cell__icon">🔑</div>
+          <h3 class="privacy-cell__title">Minimal Permissions</h3>
+          <p class="privacy-cell__body">
+            Spark only requests the permissions strictly necessary to inject
+            the sidebar and paste your text into active input fields.
+          </p>
+        </div>
+        <div class="privacy-cell">
+          <div class="privacy-cell__icon">📦</div>
+          <h3 class="privacy-cell__title">You Own Your Data</h3>
+          <p class="privacy-cell__body">
+            Your data belongs entirely to you. Export it at any time, on any
+            device. We never see or process your files.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ======================================================================== -->
+
+  <!-- ──────────────────────────────────────────────────────────────
+         FOOTER
+    ────────────────────────────────────────────────────────────────── -->
+
+  <!-- ======================== CONFIG: FOOTER ======================== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="/spark/privacy/">Privacy Policy</a>
+        <a href="mailto:piyushraut27@gmail.com">Contact Support</a>
+        <a href="/">All Extensions</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <a href="/" class="nav-brand footer-brand-name" style="text-decoration:none;">
+        <span class="nav-brand__icon nav-brand__icon--spark" aria-hidden="true"
+          style="width:22px;height:22px;font-size:12px;">⚡</span>
+        Spark
+      </a>
+      <div class="footer-locale">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="5.8" stroke="currentColor" stroke-width="1.2" />
+          <ellipse cx="7" cy="7" rx="2.4" ry="5.8" stroke="currentColor" stroke-width="1.2" />
+          <path d="M1.2 7h11.6M1.2 4.5h11.6M1.2 9.5h11.6" stroke="currentColor" stroke-width="1.2" />
+        </svg>
+        English (US)
+      </div>
+    </div>
+  </footer>
+  <!-- ============================================================ -->
+
+</body>
+
 </html>
