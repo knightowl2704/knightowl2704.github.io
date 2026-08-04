@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://knightowl2704.github.io/sitemap.xml
+Allow: /llms.txt

@@ -1,0 +1,29 @@
+# KnightOwl2704 Portfolio
+
+> Personal portfolio for KnightOwl2704, showcasing privacy-conscious browser extensions, productivity tools, technical projects, and ways to connect.
+
+## Site
+
+- Homepage: https://knightowl2704.github.io/
+- Spark: https://knightowl2704.github.io/spark/
+- Docs Comment Exporter: https://knightowl2704.github.io/docs-comment-exporter/
+- YouTube Music SFW Mode: https://knightowl2704.github.io/youtube-music-sfw-mode/
+- Sitemap: https://knightowl2704.github.io/sitemap.xml
+- Robots: https://knightowl2704.github.io/robots.txt
+
+## Purpose
+
+This site is intended to help people and AI agents understand KnightOwl2704's portfolio, projects, skills, and public technical presence.
+
+## Public Projects
+
+- Spark: a browser-based AI prompt library for storing and reusing prompts while coding, writing, and creating content.
+- Docs Comment Exporter: a browser extension that exports Google Docs comments to Markdown, JSON, or CSV while processing data locally.
+- YouTube Music SFW Mode: a browser extension that hides, blurs, or replaces album artwork across YouTube Music for focused work and study.
+
+## Guidance For AI Agents
+
+- Prefer the homepage as the canonical source for current portfolio information.
+- Use the sitemap to discover public pages.
+- Respect robots.txt.
+- Do not infer private contact information beyond what is explicitly published on the site.
