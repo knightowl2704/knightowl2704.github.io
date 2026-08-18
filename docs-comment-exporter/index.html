@@ -17,14 +17,14 @@
   <!-- ======================== CONFIG: SEO ======================== -->
   <title>Docs Comment Exporter – Export Google Docs Comments Instantly</title>
   <meta name="description"
-    content="Export Google Docs comments to Markdown, JSON, or CSV in one click. Everything runs entirely in your browser — your data stays private by design." />
+    content="Export Google Docs comments to Markdown, JSON, or CSV in one click. Pin the extension for quick access and save discussion threads instantly." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="canonical" href="https://knightowl2704.github.io/docs-comment-exporter/" />
 
   <meta property="og:title" content="Docs Comment Exporter – Export Google Docs Comments Instantly" />
   <meta property="og:description"
-    content="Export Google Docs comments to Markdown, JSON, or CSV in one click. Everything runs entirely in your browser — your data stays private by design." />
+    content="Export Google Docs comments to Markdown, JSON, or CSV in one click. Pin the extension for quick access and save discussion threads instantly." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://knightowl2704.github.io/docs-comment-exporter/" />
   <meta property="og:site_name" content="Productivity Tools Suite" />
@@ -56,14 +56,6 @@
   </script>
   <!-- ============================================================ -->
 
-  <!-- ======================== CONFIG: URLS ========================
-         Chrome Web Store install link
-         Demo video link
-         ============================================================ -->
-  <!-- INSTALL_URL = https://chromewebstore.google.com/detail/docs-comment-exporter/oajilnlhmojjpkkdjdejdcmhpkcoohec?authuser=0&hl=en-GB -->
-  <!-- DEMO_URL    = https://youtu.be/TaQ8Ptnp1jI?si=yLJOum3GZFU3nPZL -->
-  <!-- ============================================================ -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="/style.css" />
@@ -77,7 +69,6 @@
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container">
       <div class="nav-left">
-        <!-- iOS-style back chevron → homepage -->
         <a href="/" class="nav-back-icon" aria-label="All Extensions">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
             <path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
@@ -101,13 +92,26 @@
   <!-- ──────────────────────────────────────────────────────────────
          HERO
     ────────────────────────────────────────────────────────────────── -->
-
-  <!-- ======================== CONFIG: HERO ========================
-         Edit eyebrow label, headline (keep <span class="hl-docs"> for
-         coloured format names), subtitle, and CTA text below.
-         ============================================================ -->
-  <section class="product-hero" aria-labelledby="docs-hero-heading">
+  <section class="product-hero" aria-labelledby="docs-hero-heading" style="padding-bottom: var(--sp-12);">
     <div class="container">
+
+      <!-- Dynamic Welcome / Onboarding Card -->
+      <div id="onboarding-welcome" class="anim-fadeinup" style="display: none; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--r-md); padding: var(--sp-6); margin-bottom: var(--sp-8); box-shadow: var(--sh-md); text-align: left;">
+        <div style="display: flex; align-items: flex-start; gap: var(--sp-4); flex-wrap: wrap;">
+          <span style="font-size: 2rem; line-height: 1;">📌</span>
+          <div style="flex: 1; min-width: 250px;">
+            <h4 style="font-size: var(--fs-lg); font-weight: var(--fw-semibold); color: var(--clr-text-primary); margin-bottom: var(--sp-2);">Pin the extension for instant access</h4>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-secondary); line-height: 1.6; margin-bottom: var(--sp-2);">
+              To keep the exporter at your fingertips, follow these quick steps:
+            </p>
+            <ol style="font-size: var(--fs-sm); color: var(--clr-text-secondary); padding-left: var(--sp-4); line-height: 1.6; margin: 0;">
+              <li>Click the puzzle icon (🧩) in the top-right corner of your browser.</li>
+              <li>Find <strong>Docs Comment Exporter</strong> in the list.</li>
+              <li>Click the pin icon (📌) next to it so it stays visible in your toolbar.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
 
       <div class="product-hero__eyebrow anim-fadeinup">
         <span class="section-label">Chrome Extension</span>
@@ -121,8 +125,7 @@
       </h1>
 
       <p class="product-hero__subtitle anim-fadeinup anim-fadeinup-d2">
-        Everything runs entirely in your browser. Your comments are never
-        sent, stored, or read anywhere else. Complete privacy by design.
+        Everything runs entirely in your browser. Your comments are never sent, stored, or read anywhere else. Complete privacy by design.
       </p>
 
       <div class="product-hero__actions anim-fadeinup anim-fadeinup-d3">
@@ -133,6 +136,9 @@
               stroke-linejoin="round" />
           </svg>
           Add to Chrome – Free
+        </a>
+        <a href="#quick-start" class="btn btn-ghost btn-lg" id="docs-hero-guide">
+          Get Started Guide ↓
         </a>
         <a href="https://youtu.be/TaQ8Ptnp1jI?si=yLJOum3GZFU3nPZL" target="_blank" rel="noopener noreferrer"
           class="btn btn-ghost btn-lg" id="docs-hero-demo">
@@ -147,125 +153,150 @@
     </div>
 
     <!-- Hero visual -->
-    <div class="product-hero__visual anim-fadeinup anim-fadeinup-d3" aria-hidden="true">
+    <div class="product-hero__visual anim-fadeinup anim-fadeinup-d3" aria-hidden="true" style="margin-top: var(--sp-8);">
       <div class="visual-frame">
         <img src="/assets/images/docs-ui.png"
-          alt="Docs Comment Exporter showing a Google Docs page with an export dialog" width="860" height="540" />
+          alt="Docs Comment Exporter interface inside a Google Doc page" width="860" height="540" />
       </div>
     </div>
   </section>
-  <!-- ============================================================ -->
 
   <!-- ──────────────────────────────────────────────────────────────
-         FEATURE GRID — 4 key features
+         QUICK START SECTION (3-Step Guide)
     ────────────────────────────────────────────────────────────────── -->
+  <section class="quick-start-section" id="quick-start" aria-labelledby="quick-start-heading" style="padding: var(--sp-16) 0; background: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border);">
+    <div class="container">
+      <div class="text-center" style="max-width: var(--container-text); margin: 0 auto var(--sp-12) auto;">
+        <span class="section-label" style="background: var(--clr-accent-light); color: var(--clr-accent);">Quick Start</span>
+        <h2 id="quick-start-heading" style="font-size: var(--fs-3xl); font-weight: var(--fw-bold); color: var(--clr-text-primary); margin-top: var(--sp-3); margin-bottom: var(--sp-4);">
+          Start Exporting in 3 Simple Steps
+        </h2>
+        <p style="font-size: var(--fs-lg); color: var(--clr-text-secondary);">
+          No complex setup or manuals required. Just open, click, and save.
+        </p>
+      </div>
 
-  <!-- ======================== CONFIG: FEATURES ========================
-         Edit feature cells below (icon, title, body).
-         =================================================================== -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-8);">
+        <!-- Step 1 -->
+        <div style="background: var(--clr-bg); border-radius: var(--r-md); padding: var(--sp-6); border: 1px solid var(--clr-border);">
+          <div style="width: 40px; height: 40px; border-radius: var(--r-full); background: var(--clr-accent-light); color: var(--clr-accent); display: flex; align-items: center; justify-content: center; font-weight: var(--fw-bold); font-size: var(--fs-lg); margin-bottom: var(--sp-4);">1</div>
+          <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-semibold); margin-bottom: var(--sp-2);">Open a Google Doc</h3>
+          <p style="color: var(--clr-text-secondary); font-size: var(--fs-sm); line-height: 1.6;">Go to any Google Doc that has comments you want to extract.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div style="background: var(--clr-bg); border-radius: var(--r-md); padding: var(--sp-6); border: 1px solid var(--clr-border);">
+          <div style="width: 40px; height: 40px; border-radius: var(--r-full); background: var(--clr-accent-light); color: var(--clr-accent); display: flex; align-items: center; justify-content: center; font-weight: var(--fw-bold); font-size: var(--fs-lg); margin-bottom: var(--sp-4);">2</div>
+          <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-semibold); margin-bottom: var(--sp-2);">Click the Exporter</h3>
+          <p style="color: var(--clr-text-secondary); font-size: var(--fs-sm); line-height: 1.6;">Click the extension icon in your toolbar, or use the floating export button on the side of the page.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div style="background: var(--clr-bg); border-radius: var(--r-md); padding: var(--sp-6); border: 1px solid var(--clr-border);">
+          <div style="width: 40px; height: 40px; border-radius: var(--r-full); background: var(--clr-accent-light); color: var(--clr-accent); display: flex; align-items: center; justify-content: center; font-weight: var(--fw-bold); font-size: var(--fs-lg); margin-bottom: var(--sp-4);">3</div>
+          <h3 style="font-size: var(--fs-xl); font-weight: var(--fw-semibold); margin-bottom: var(--sp-2);">Save Your Comments</h3>
+          <p style="color: var(--clr-text-secondary); font-size: var(--fs-sm); line-height: 1.6;">Select your preferred format (Markdown, JSON, or CSV) and click download to get your file instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────────────────────────
+         FEATURES SECTION
+    ────────────────────────────────────────────────────────────────── -->
   <section class="features-section" id="features" aria-labelledby="docs-features-heading">
     <div class="container">
+
+      <div class="text-center" style="max-width: var(--container-text); margin: 0 auto var(--sp-12) auto;">
+        <span class="section-label">Product Features</span>
+        <h2 id="docs-features-heading" style="font-size: var(--fs-3xl); font-weight: var(--fw-bold); color: var(--clr-text-primary); margin-top: var(--sp-3); margin-bottom: var(--sp-4);">
+          Everything You Need for Clean Comment Backups
+        </h2>
+      </div>
 
       <div class="feature-grid" role="list">
 
         <div class="feature-cell" role="listitem">
           <div class="feature-cell__icon feature-cell__icon--accent" aria-hidden="true">🔒</div>
-          <h3 class="feature-cell__title">Maximum Privacy &amp; Control</h3>
+          <h3 class="feature-cell__title">Complete Privacy</h3>
           <p class="feature-cell__body">
-            You explicitly choose and grant access only to the specific file
-            you want to export. Unlike other tools, we never require access
-            to your entire Google Drive. Your data sovereignty is our
-            priority.
+            Choose and grant access only to the specific file you want to export. We never require access to your entire Google Drive—keeping your data safe.
           </p>
         </div>
 
         <div class="feature-cell" role="listitem">
-          <div class="feature-cell__icon feature-cell__icon--amber" aria-hidden="true">✨</div>
-          <h3 class="feature-cell__title">Redesigned Experience</h3>
+          <div class="feature-cell__icon feature-cell__icon--amber" aria-hidden="true">💡</div>
+          <h3 class="feature-cell__title">Pro Tip: Smart Filtering</h3>
           <p class="feature-cell__body">
-            A completely overhauled interface built for a smoother, faster
-            exporting process with real-time feedback. Exporting feels
-            instant and intuitive — no setup, no waiting.
+            Isolate specific feedback instantly. Search comments by keyword, or filter them by author, resolution status, and replies before exporting.
           </p>
         </div>
 
         <div class="feature-cell" role="listitem">
-          <div class="feature-cell__icon feature-cell__icon--green" aria-hidden="true">🛡️</div>
-          <h3 class="feature-cell__title">Security &amp; Trust</h3>
+          <div class="feature-cell__icon feature-cell__icon--green" aria-hidden="true">✓</div>
+          <h3 class="feature-cell__title">Logical Threads</h3>
           <p class="feature-cell__body">
-            Our pinpoint file access resolves the previous
-            "untrusted developer" warning entirely. A seamless, trusted
-            installation experience is guaranteed.
+            Keep the flow of discussion intact. Exports retain the exact structure of comment threads, showing all replies in their correct order.
           </p>
         </div>
 
         <div class="feature-cell" role="listitem">
           <div class="feature-cell__icon feature-cell__icon--teal" aria-hidden="true">📊</div>
-          <h3 class="feature-cell__title">Rich Metadata Extraction</h3>
+          <h3 class="feature-cell__title">Rich Metadata</h3>
           <p class="feature-cell__body">
-            Exports timestamps, author emails, full thread interactions (showing exactly when a conversation was "Resolved" or "Reopened"), and
-            even HTML content — giving you everything needed for audit
-            trails, documentation, and offline analysis.
+            Extract timestamps, author details, links, and resolution status automatically for clean project audits and reviews.
           </p>
         </div>
 
         <div class="feature-cell" role="listitem">
-          <div class="feature-cell__icon feature-cell__icon--purple" style="background: var(--clr-purple-bg); color: var(--clr-purple);" aria-hidden="true">🔍</div>
-          <h3 class="feature-cell__title">Smart Comment Filters</h3>
+          <div class="feature-cell__icon feature-cell__icon--purple" style="background: var(--clr-purple-bg); color: var(--clr-purple);" aria-hidden="true">📁</div>
+          <h3 class="feature-cell__title">Multiple Formats</h3>
           <p class="feature-cell__body">
-            Stop scrolling to find specific feedback. Search your comments by keyword, or filter them by author, resolved/unresolved status, and replies. Reset your view in one click.
+            Save your feedback in the format that works for you. Use Markdown for editing, CSV for spreadsheets, or JSON for custom databases.
           </p>
         </div>
 
         <div class="feature-cell" role="listitem">
           <div class="feature-cell__icon feature-cell__icon--accent" aria-hidden="true">🎯</div>
-          <h3 class="feature-cell__title">Stays Out of Your Way</h3>
+          <h3 class="feature-cell__title">Flexible Placement</h3>
           <p class="feature-cell__body">
-            The export button will never block your reading. Drag it anywhere on the page, or snap it to the edge of your screen where it shrinks out of view until you need it.
+            Move or collapse the floating export button anywhere on your screen so it never blocks your writing or reading flow.
           </p>
         </div>
 
       </div>
     </div>
   </section>
-  <!-- =================================================================== -->
 
   <!-- ──────────────────────────────────────────────────────────────
-         HIGHLIGHT ROW — "Instant Detection. Zero Lag."
+         HIGHLIGHT ROW
     ────────────────────────────────────────────────────────────────── -->
-
-  <!-- ======================== CONFIG: HIGHLIGHT SECTION ========================
-         Edit the eyebrow, title, body paragraph, and check-list items below.
-         ========================================================================= -->
   <section class="highlight-section" id="detection" aria-labelledby="docs-detect-heading">
     <div class="highlight-row">
 
       <!-- Text side -->
       <div class="highlight-row__content">
-        <span class="highlight-row__eyebrow">Real-time</span>
+        <span class="highlight-row__eyebrow">Real-time Preview</span>
         <h2 class="highlight-row__title" id="docs-detect-heading">
-          Instant Detection.<br />
-          <span class="hl-teal" style="color: var(--clr-teal);">Zero Lag.</span>
+          Confirm Before<br />
+          <span class="hl-teal" style="color: var(--clr-teal);">You Export.</span>
         </h2>
         <p class="highlight-row__body">
-          The moment you open the extension, it scans the current document
-          and shows you a live preview of all comment threads. No manual
-          scanning required.
+          See your comment threads and metadata directly inside the extension preview before downloading your file.
         </p>
-        <ul class="check-list" aria-label="Detection features">
+        <ul class="check-list" aria-label="Key features list">
           <li class="check-list__item">
             <span class="check-list__icon" aria-hidden="true">✓</span>
             <div>
-              <strong>Real-time Previews</strong><br />
-              See what you're exporting before you commit.
+              <strong>Instant Loading</strong><br />
+              Loads comments directly in the sidebar preview.
             </div>
           </li>
           <li class="check-list__item">
             <span class="check-list__icon" aria-hidden="true">✓</span>
             <div>
-              <strong>Export Threads</strong><br />
-              Maintain the logical flow of conversations including all
-              replies.
+              <strong>Format Previews</strong><br />
+              Double-check formatting settings before saving.
             </div>
           </li>
         </ul>
@@ -278,24 +309,17 @@
 
     </div>
   </section>
-  <!-- ========================================================================= -->
 
   <!-- ──────────────────────────────────────────────────────────────
          CTA BANNER
     ────────────────────────────────────────────────────────────────── -->
-
-  <!-- ======================== CONFIG: CTA BANNER ========================
-         Edit banner headline, subtitle, and button text below.
-         Avoid using specific numbers — keep the copy honest and timeless.
-         ======================================================================= -->
   <section class="cta-banner" aria-labelledby="docs-cta-heading">
     <div class="container">
       <h2 class="cta-banner__title" id="docs-cta-heading">
-        Ready to reclaim your data?
+        Start exporting comments in one click
       </h2>
       <p class="cta-banner__subtitle">
-        Trusted by researchers, writers, and teams for better collaboration
-        and documentation.
+        Save time organizing client feedback, research notes, and team edits.
       </p>
       <a href="https://chromewebstore.google.com/detail/docs-comment-exporter/oajilnlhmojjpkkdjdejdcmhpkcoohec?authuser=0&hl=en-GB"
         target="_blank" rel="noopener noreferrer" class="btn btn-cta-outline btn-lg" id="docs-cta-install">
@@ -303,18 +327,18 @@
       </a>
     </div>
   </section>
-  <!-- ======================================================================= -->
 
   <!-- ──────────────────────────────────────────────────────────────
          FOOTER
     ────────────────────────────────────────────────────────────────── -->
-
-  <!-- ======================== CONFIG: FOOTER ======================== -->
   <footer class="site-footer">
     <div class="footer-top">
-      <nav class="footer-links" aria-label="Footer links">
+      <div style="margin-bottom: var(--sp-6); font-size: var(--fs-sm); color: var(--clr-text-secondary);">
+        🔒 <strong>Privacy First:</strong> Your document comments never leave your browser. Everything runs locally on your machine.
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
         <a href="/docs-comment-exporter/privacy/">Privacy Policy</a>
-        <a href="https://app.youform.com/forms/iwboamsb" target="_blank" rel="noopener noreferrer">Contact Support</a>
+        <a href="https://app.youform.com/forms/iwboamsb" target="_blank" rel="noopener noreferrer">Contact Support &amp; Feedback</a>
         <a href="/">All Extensions</a>
       </nav>
     </div>
@@ -329,7 +353,68 @@
       </div>
     </div>
   </footer>
-  <!-- ============================================================ -->
+
+  <!-- Dynamic JS for handling post-install scenario -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const isInstalled = params.get('installed') === 'true' || window.location.hash === '#installed';
+
+      if (isInstalled) {
+        // Replace nav CTA with a success/welcome badge
+        const navRight = document.querySelector('.nav-right');
+        if (navRight) {
+          navRight.innerHTML = `
+            <span class="status-badge" style="
+              background: var(--clr-green-bg);
+              color: var(--clr-green);
+              border: 1px solid var(--clr-green-border);
+              padding: var(--sp-2) var(--sp-4);
+              border-radius: var(--r-full);
+              font-size: var(--fs-xs);
+              font-weight: var(--fw-semibold);
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              box-shadow: var(--sh-xs);
+            ">
+              🎉 Installed Successfully
+            </span>
+          `;
+        }
+
+        // Show onboarding / pinning guide
+        const onboardingWelcome = document.getElementById('onboarding-welcome');
+        if (onboardingWelcome) {
+          onboardingWelcome.style.display = 'block';
+        }
+
+        // Celebrate in Hero Header
+        const heroTitle = document.getElementById('docs-hero-heading');
+        if (heroTitle) {
+          heroTitle.innerHTML = 'You’re Ready to <span class="hl-docs">Export Google Docs Comments</span>!';
+        }
+
+        // Shift subtitle focus to onboarding
+        const heroSubtitle = document.querySelector('.product-hero__subtitle');
+        if (heroSubtitle) {
+          heroSubtitle.innerHTML = 'Docs Comment Exporter is installed and active. Follow the guide below to pin the extension and start exporting your comments in seconds.';
+        }
+
+        // Hide standard Install buttons
+        const heroInstall = document.getElementById('docs-hero-install');
+        if (heroInstall) {
+          heroInstall.style.display = 'none';
+        }
+        
+        // Hide acquisition CTA banner
+        const ctaBanner = document.querySelector('.cta-banner');
+        if (ctaBanner) {
+          ctaBanner.style.display = 'none';
+        }
+      }
+    });
+  </script>
 
 </body>
 
