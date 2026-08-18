@@ -107,6 +107,29 @@
   <section class="product-hero" aria-labelledby="spark-hero-heading">
     <div class="container">
 
+      <!-- Dynamic Welcome / Onboarding Card -->
+      <div id="onboarding-welcome" class="anim-fadeinup" style="display: none; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--r-md); padding: var(--sp-6); margin-bottom: var(--sp-8); box-shadow: var(--sh-md); text-align: left;">
+        <div style="display: flex; align-items: flex-start; gap: var(--sp-4); flex-wrap: wrap;">
+          <span style="font-size: 2rem; line-height: 1;">📌</span>
+          <div style="flex: 1; min-width: 250px;">
+            <h4 style="font-size: var(--fs-lg); font-weight: var(--fw-semibold); color: var(--clr-text-primary); margin-bottom: var(--sp-2);">Pin Spark for instant access</h4>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-secondary); line-height: 1.6; margin-bottom: var(--sp-2);">
+              To open your prompt library anytime you need it:
+            </p>
+            <ol style="font-size: var(--fs-sm); color: var(--clr-text-secondary); padding-left: var(--sp-4); line-height: 1.6; margin: 0;">
+              <li>Click the puzzle icon (🧩) in the top-right corner of your browser and pin (📌) <strong>Spark</strong>.</li>
+              <li>Click the Spark icon (⚡) in your browser toolbar, then click <strong>Allow access</strong> in the popup to enable Spark on the current page.</li>
+              <li>Refresh the page. You will now see the floating Spark button on the right side of your screen. Click it to open your prompt library!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-hero__eyebrow anim-fadeinup" style="margin-bottom: var(--sp-4);">
+        <span class="section-label">Chrome Extension</span>
+        <span class="section-label" style="background: var(--clr-accent-light); color: var(--clr-accent); margin-left: var(--sp-2);">v26.7.26 Update</span>
+      </div>
+
       <h1 class="product-hero__title anim-fadeinup" id="spark-hero-heading">
         Never lose a great
         <span class="hl-spark">AI prompt</span>
@@ -196,11 +219,9 @@
 
         <div class="feature-cell" role="listitem">
           <div class="feature-cell__icon feature-cell__icon--purple" aria-hidden="true">📁</div>
-          <h3 class="feature-cell__title">Advanced Organisation</h3>
+          <h3 class="feature-cell__title">Smart Folder Navigation &amp; UX</h3>
           <p class="feature-cell__body">
-            Custom folders, visual colour-coding, drag-and-drop reordering,
-            and a star-favourites system keep your library perfectly sorted
-            no matter how large it grows.
+            Customise your workspace with folder collapse/expand toggles, quick navigation chips to instantly jump to folders, and a newly expanded color palette (including Yellow, Orange, Green, and Cyan) for perfect visual structure.
           </p>
         </div>
 
@@ -343,6 +364,50 @@
   <!-- ======================================================================== -->
 
   <!-- ──────────────────────────────────────────────────────────────
+         FAQ SECTION
+    ────────────────────────────────────────────────────────────────── -->
+  <section class="faq-section" id="faq" aria-labelledby="spark-faq-heading">
+    <div class="container">
+      <header class="faq-header">
+        <h2 class="faq-header__title" id="spark-faq-heading">Frequently Asked Questions</h2>
+        <p class="faq-header__subtitle">Have questions about Spark? We have answers.</p>
+      </header>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>How do I save and organize my ChatGPT prompts for later use?</summary>
+          <div class="faq-answer">
+            <p>Spark lets you save prompts from anywhere and organize them instantly. You can build custom folders, apply color-coding, and favorite your top snippets so you can retrieve the exact command you need in seconds. The extension stores all prompts locally in your browser with zero external tracking.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I auto-paste saved prompts into ChatGPT, Claude, or Gemini?</summary>
+          <div class="faq-answer">
+            <p>Spark provides a 1-Click Auto-Paste feature that injects templates directly into active input fields on any AI platform. If a site isn't fully compatible, a manual copy button is also available to ensure universal website compatibility.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I export my prompt library and import it to a new device?</summary>
+          <div class="faq-answer">
+            <p>Yes. Spark lets you download your entire library into a secure backup file with a single click. You can then import it on a new device to instantly migrate your workflows. This is perfect for switching browsers or setting up a new computer.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is my prompt data stored on external servers or shared with third parties?</summary>
+          <div class="faq-answer">
+            <p>No. Spark stores all text locally in your browser with zero external tracking, telemetry, or data collection. Your proprietary prompts and templates remain completely secure and private.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does Spark work with AI platforms other than ChatGPT?</summary>
+          <div class="faq-answer">
+            <p>Yes. Spark is platform-agnostic. It works on most of the AI websites with a text input field. The sidebar stays accessible whether you're on chat.openai.com, claude.ai, gemini.google.com, and a lot more. If it does not work, feel free to use the 'Contact Us' link and let us know. We will add support for it. The auto-paste feature intelligently detects the active input field on these major platforms and injects your prompt with one click.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────────────────────────
          FOOTER
     ────────────────────────────────────────────────────────────────── -->
 
@@ -372,6 +437,62 @@
     </div>
   </footer>
   <!-- ============================================================ -->
+
+  <!-- Dynamic JS for handling post-install scenario -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const isInstalled = params.get('installed') === 'true' || window.location.hash === '#installed';
+
+      if (isInstalled) {
+        // Replace nav CTA with a success/welcome badge
+        const navRight = document.querySelector('.nav-right');
+        if (navRight) {
+          navRight.innerHTML = `
+            <span class="status-badge" style="
+              background: var(--clr-green-bg);
+              color: var(--clr-green);
+              border: 1px solid var(--clr-green-border);
+              padding: var(--sp-2) var(--sp-4);
+              border-radius: var(--r-full);
+              font-size: var(--fs-xs);
+              font-weight: var(--fw-semibold);
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              box-shadow: var(--sh-xs);
+            ">
+              🎉 Installed Successfully
+            </span>
+          `;
+        }
+
+        // Show onboarding / pinning guide
+        const onboardingWelcome = document.getElementById('onboarding-welcome');
+        if (onboardingWelcome) {
+          onboardingWelcome.style.display = 'block';
+        }
+
+        // Celebrate in Hero Header
+        const heroTitle = document.getElementById('spark-hero-heading');
+        if (heroTitle) {
+          heroTitle.innerHTML = 'You’re Ready to <span class="hl-spark">Save &amp; Organize AI Prompts</span>!';
+        }
+
+        // Shift subtitle focus to onboarding
+        const heroSubtitle = document.querySelector('.product-hero__subtitle');
+        if (heroSubtitle) {
+          heroSubtitle.innerHTML = 'Spark is installed and active. Follow the steps below to pin the extension and start managing your prompt templates in any chat.';
+        }
+
+        // Hide standard Install button
+        const heroInstall = document.getElementById('spark-hero-install');
+        if (heroInstall) {
+          heroInstall.style.display = 'none';
+        }
+      }
+    });
+  </script>
 
 </body>
 
