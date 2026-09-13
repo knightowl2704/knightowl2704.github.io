@@ -196,6 +196,9 @@
           </svg>
           View Demo
         </a>
+        <a href="#more-tools" class="btn btn-secondary btn-lg" id="docs-hero-more-tools" style="display: none;">
+          Explore Other Tools ↓
+        </a>
       </div>
 
     </div>
@@ -421,6 +424,24 @@
   </section>
 
   <!-- ──────────────────────────────────────────────────────────────
+         MORE TOOLS SECTION (Subtle Cross-Promotion)
+    ────────────────────────────────────────────────────────────────── -->
+  <section class="more-tools-section" id="more-tools" style="padding: var(--sp-12) 0; background: var(--clr-bg); border-top: 1px solid var(--clr-border);">
+    <div class="container">
+      <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--r-md); padding: var(--sp-6); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-4);">
+        <div style="flex: 1; min-width: 260px;">
+          <span style="font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.05em; font-weight: var(--fw-semibold); color: var(--clr-accent);">Discover More Productivity Tools</span>
+          <h4 style="font-size: var(--fs-lg); font-weight: var(--fw-semibold); color: var(--clr-text-primary); margin-top: var(--sp-1); margin-bottom: var(--sp-1);">Pluck Notes for Notion</h4>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-secondary); margin: 0; line-height: 1.5;">Turn YouTube videos into organized Notion notes with screenshots, transcripts, and timestamped notes.</p>
+        </div>
+        <a href="https://plucknotes.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="white-space: nowrap;">
+          Learn More ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────────────────────────
          FOOTER
     ────────────────────────────────────────────────────────────────── -->
   <footer class="site-footer">
@@ -430,6 +451,7 @@
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="/docs-comment-exporter/privacy/">Privacy Policy</a>
+        <a href="https://plucknotes.vercel.app/" target="_blank" rel="noopener noreferrer">Pluck Notes for Notion ↗</a>
         <a href="https://app.youform.com/forms/iwboamsb" target="_blank" rel="noopener noreferrer">Contact Support &amp; Feedback</a>
         <a href="/">All Extensions</a>
       </nav>
@@ -493,10 +515,15 @@
           heroSubtitle.innerHTML = 'Docs Comment Exporter is installed and active. Follow the guide below to pin the extension and start exporting your comments in seconds.';
         }
 
-        // Hide standard Install buttons
+        // Hide standard Install buttons and reveal Explore Other Tools button
         const heroInstall = document.getElementById('docs-hero-install');
         if (heroInstall) {
           heroInstall.style.display = 'none';
+        }
+
+        const heroMoreTools = document.getElementById('docs-hero-more-tools');
+        if (heroMoreTools) {
+          heroMoreTools.style.display = 'inline-flex';
         }
         
         // Hide acquisition CTA banner

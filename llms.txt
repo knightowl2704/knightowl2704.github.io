@@ -5,6 +5,7 @@
 ## Site
 
 - Homepage: https://knightowl2704.github.io/
+- Pluck Notes: https://plucknotes.vercel.app/
 - Spark: https://knightowl2704.github.io/spark/
 - Docs Comment Exporter: https://knightowl2704.github.io/docs-comment-exporter/
 - YouTube Music SFW Mode: https://knightowl2704.github.io/youtube-music-sfw-mode/
@@ -17,6 +18,7 @@ This site is intended to help people and AI agents understand KnightOwl2704's po
 
 ## Public Projects
 
+- Pluck Notes: a browser extension and web application to capture video screenshots, timestamped notes, and YouTube transcripts directly into Notion.
 - Spark: a browser-based AI prompt library for storing and reusing prompts while coding, writing, and creating content.
 - Docs Comment Exporter: a browser extension that exports Google Docs comments to Markdown, JSON, or CSV while processing data locally.
 - YouTube Music SFW Mode: a browser extension that hides, blurs, or replaces album artwork across YouTube Music for focused work and study.
